@@ -1621,14 +1621,10 @@ at all.
       end
 
       # protected and private methods are grouped near the end
-      protected
-
-      def some_protected_method
+      protected; def some_protected_method
       end
 
-      private
-
-      def some_private_method
+      private; def some_private_method
       end
     end
     ```
@@ -1895,11 +1891,7 @@ in inheritance.
 in accordance with their intended usage. Don't go off leaving
 everything `public` (which is the default). After all we're coding
 in *Ruby* now, not in *Python*.
-* Indent the `public`, `protected`, and `private` methods as much the
-  method definitions they apply to. Leave one blank line above the
-  visibility modifier
-  and one blank line below in order to emphasize that it applies to all
-  methods below it.
+* Indent the `public`, `protected`, and `private` method definitions the same amount. Put the visibility modifier in line with the method definition followed by a semicolon, for every method to which it applies.
 
     ```Ruby
     class SomeClass
@@ -1907,13 +1899,11 @@ in *Ruby* now, not in *Python*.
         # ...
       end
 
-      private
-
-      def private_method
+      private; def private_method
         # ...
       end
 
-      def another_private_method
+      private; def another_private_method
         # ...
       end
     end
